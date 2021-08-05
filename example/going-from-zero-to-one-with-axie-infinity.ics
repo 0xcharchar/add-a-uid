@@ -1,0 +1,11 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+URL:https://app.hopin.com/events/smart-contract-summit-1/reception
+DTSTART:20210805T133000Z
+DTEND:20210805T134500Z
+SUMMARY:Going from Zero to One with Axie Infinity
+DESCRIPTION:By Andrew Thurman, Aleksander Leonard Larsen
+LOCATION:https://app.hopin.com/events/smart-contract-summit-1/stages/ed1ad312-5eeb-4d39-8616-6f092e6ae2a8
+END:VEVENT
+END:VCALENDAR

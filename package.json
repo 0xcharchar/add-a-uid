@@ -1,0 +1,15 @@
+{
+  "name": "add-a-uid",
+  "version": "0.1.0",
+  "description": "Pump data through some libraries lol",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ical": "^0.8.0",
+    "ical-generator": "^3.0.0"
+  }
+}
