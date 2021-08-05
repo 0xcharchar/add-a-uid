@@ -23,15 +23,28 @@ async function updateCalendarFile (filePath) {
     parsedEvent = { ...existingCalendar[k] }
   }
 
+  if (parsedEvent.uid || parsedEvent.id) {
+    // already has an ID and icalGen will blow it away for fun, so we skip
+    return
+  }
+
   const updatedCalendar = icalGen()
   updatedCalendar.createEvent(parsedEvent)
 
   await updatedCalendar.save(filePath)
 }
 
+function usage () {
+  return `Usage: ./index.js <dirOrIcs>
+
+Update one or more *.ics files to have a UID
+
+dirOrIcs    path to folder (filters *.ics files) or single ICS file`
+}
+
 (async () => {
-  if (!dirOrICal) {
-    console.error('You need to pass a single calendar file path or a folder where you have .ics files')
+  if (!dirOrICal || dirOrICal === '-h') {
+    console.error(usage())
     process.exit(1)
   }
 
